@@ -12,41 +12,54 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fredyjimenezrendon.springangular.beans.RailwayStation;
-import com.xvitcoder.angualrspringapp.service.RailwayStationServiceImpl;
+import com.fredyjimenezrendon.springangular.services.impl.RailwayStationServiceImpl;
 
 @Controller
 @RequestMapping("/railwaystations")
-public class RailwayStationController {
+public class RailwayStationController
+{
 
-    @Autowired
-    private RailwayStationServiceImpl railwayStationsService;
+	@Autowired
+	private RailwayStationServiceImpl railwayStationsService;
 
-    @RequestMapping("railwaystationlist.json")
-    public @ResponseBody List<RailwayStation> getRailwayStationList() {
-        return railwayStationsService.getAllRailwayStations();
-    }
+	@RequestMapping("railwaystationlist.json")
+	public @ResponseBody
+	List<RailwayStation> getRailwayStationList()
+	{
+		return railwayStationsService.getAllRailwayStations();
+	}
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public @ResponseBody void addRailwayStation(@RequestBody RailwayStation railwayStation) {
-        railwayStationsService.addRailwayStation(railwayStation);
-    }
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	public @ResponseBody
+	void addRailwayStation(@RequestBody RailwayStation railwayStation)
+	{
+		railwayStationsService.addRailwayStation(railwayStation);
+	}
 
-    @RequestMapping(value = "/update", method = RequestMethod.PUT)
-    public @ResponseBody void updateRailwayStation(@RequestBody RailwayStation railwayStation) {
-        railwayStationsService.updateRailwayStation(railwayStation);
-    }
+	@RequestMapping(value = "/update", method = RequestMethod.PUT)
+	public @ResponseBody
+	void updateRailwayStation(@RequestBody RailwayStation railwayStation)
+	{
+		railwayStationsService.updateRailwayStation(railwayStation);
+	}
 
-    @RequestMapping(value = "/remove/{id}", method = RequestMethod.DELETE)
-    public @ResponseBody void removeRailwayStation(@PathVariable("id") Long id) {
-        railwayStationsService.deleteRailwayStationById(id);
-    }
+	@RequestMapping(value = "/remove/{id}", method = RequestMethod.DELETE)
+	public @ResponseBody
+	void removeRailwayStation(@PathVariable("id") Long id)
+	{
+		railwayStationsService.deleteRailwayStationById(id);
+	}
 
-    @RequestMapping(value = "/removeAll", method = RequestMethod.DELETE)
-    public @ResponseBody void removeAllRailwayStations() {
-        railwayStationsService.deleteAll();
-    }
+	@RequestMapping(value = "/removeAll", method = RequestMethod.DELETE)
+	public @ResponseBody
+	void removeAllRailwayStations()
+	{
+		railwayStationsService.deleteAll();
+	}
 
-    @RequestMapping("/layout")
-    public String getRailwayStationPartialPage(ModelMap modelMap) {
-        return "railwaystations/layout";
-    }
+	@RequestMapping("/layout")
+	public String getRailwayStationPartialPage(ModelMap modelMap)
+	{
+		return "railwaystations/layout";
+	}
+}

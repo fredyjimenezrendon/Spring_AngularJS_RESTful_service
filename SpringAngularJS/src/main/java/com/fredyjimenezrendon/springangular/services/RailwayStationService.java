@@ -1,14 +1,13 @@
 package com.fredyjimenezrendon.springangular.services;
 
-import com.fredyjimenezrendon.springangular.beans.RailwayStation;
-import com.fredyjimenezrendon.springangular.controllers.RailwayStationController;
-
 import java.util.List;
+
+import com.fredyjimenezrendon.springangular.beans.RailwayStation;
 
 public interface RailwayStationService
 {
 
-	public List<RailwayStationController> getAllRailwayStations();
+	public List<RailwayStation> getAllRailwayStations();
 
 	public RailwayStation getRailwayStationById(Long id);
 
