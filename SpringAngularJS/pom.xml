@@ -5,8 +5,8 @@
 	<artifactId>SpringAngularJS</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringAngularJS Maven Webapp</name>
-	<url>http://maven.apache.org</url>
+	<name>SpringAngularJS</name>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -20,12 +20,29 @@
 			<version>4.0.5.RELEASE</version>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.0.1.RELEASE</version>
+		</dependency>
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.12</version>
+		</dependency>
 	</dependencies>
+	
 	<build>
 		<finalName>SpringAngularJS</finalName>
 	</build>
+	
 </project>
