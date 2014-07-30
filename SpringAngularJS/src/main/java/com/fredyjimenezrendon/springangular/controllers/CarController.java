@@ -18,7 +18,7 @@ public class CarController
 {
 
 	@Autowired
-	private CarService carService;
+	private CarServiceImpl carService;
 
 	@RequestMapping("/carlist.json")
 	public @ResponseBody
