@@ -11,7 +11,7 @@ public interface RailwayStationService
 
 	public RailwayStation getRailwayStationById(Long id);
 
-	public void addRailwayStation(RailwayStation RailwayStation);
+	public boolean addRailwayStation(RailwayStation RailwayStation);
 
 	public void deleteRailwayStationById(Long id);
 
