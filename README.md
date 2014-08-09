@@ -1,4 +1,3 @@
 Spring_AngularJS_RESTful_service
 ================================
-
-Proyecto donde se usa AngularJS en el cliente y en back end Spring MVC exponiendo un servicio we RESTful
+This proyect implements a CRUD using RESTful service, I use Spring MVC 4 and AngularJS and Bootstrap on the front-end.
